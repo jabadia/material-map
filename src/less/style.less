@@ -1,1 +1,169 @@
 /* style */
+
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 25%;
+    &.expanded { padding-bottom: 100%; }
+    transition: padding 0.5s ease-in-out;
+    overflow: hidden;
+
+    .expander {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 5;
+    }
+}
+
+#mapa {
+    width: 100%;
+    height: 0;
+    margin-top: -40%;
+    padding-bottom: 100%;
+    transition: padding 0.5s ease-in-out;
+
+    background-color: #444;
+
+    outline: none;
+    transition: margin 0.5s ease-in-out;
+}
+// .expanded #mapa { padding-bottom: 100%; }
+.expanded #mapa { margin-top: 0%; }
+
+
+#mapa svg 
+{
+    .municipio {
+        stroke: #ddd;
+        // stroke: none;
+        stroke-width: 0.75px;
+        stroke-opacity: 1;
+        fill-opacity: 1;
+        // fill: #fff;
+
+        &:hover {
+            stroke-width: 3px;
+        }
+    }
+
+    .provincia {
+        // stroke: #000;
+        stroke: #fff;
+        stroke-width: 2.5px;
+        stroke-opacity: 1;
+        fill: transparent;
+        // fill-opacity: 1;
+        // fill: #fff;
+        pointer-events: none;
+    }
+}
+
+#mapa {
+    .pp         { color: #11a3de; fill: #11a3de; }   // Partido Popular   | Rgb - 17-163-222
+    .psoe       { color: #d20a11; fill: #d20a11; }   // PSOE              | Rgb - 210-10-17
+    .ciudadanos { color: #ec6b27; fill: #ec6b27; }   // Ciudadanos        | Rgb - 236-107-39
+    .podemos    { color: #6e2362; fill: #6e2362; }   // Podemos           | Rgb - 110-35-98
+    .iu         { color: #009f62; fill: #009f62; }   // IU                | Rgb - 0-159-98
+    .pnv        { color: #006634; fill: #006634; }   // PNV               | Rgb - 0-102-52
+    .upyd       { color: #e7548e; fill: #e7548e; }   // UPyD              | Rgb - 231-85-143
+    .cdc        { color: #f09926; fill: #f09926; }   // Convergencia      | Rgb - 240-153-38
+    .amaiur     { color: #118f9f; fill: #118f9f; }   // Amaiur            | Rgb - 17-143-159
+    .bildu      { color: #b3c900; fill: #b3c900; }   // Bildu             | Rgb - 179-201-0
+    .cc         { color: #eeda00; fill: #eeda00; }   // Coalición Canaria | Rgb - 238-218-0
+    .bng        { color: #8dd8f8; fill: #8dd8f8; }   // BNG               | Rgb - 141-216-248
+    .gbai       { color: #ae2f17; fill: #ae2f17; }   // GBAI              | Rgb - 174-47-23
+    .erc        { color: #b87513; fill: #b87513; }   // Esquerra          | Rgb - 184-117-20
+    .compromis  { color: #ec4f07; fill: #ec4f07; }   // Compromís         | Rgb - 236-79-7
+    .fac        { color: #17375e; fill: #17375e; }   // FAC               | Rgb - 23-55-94
+}
+
+@partido-desconocido: #ccc;
+
+.escrutinio {
+    font-size: 0.8em;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.tabla-resultados 
+{
+    border-collapse: collapse;
+
+    td {
+        text-align: center;
+        border: 1px solid #ddd;
+        padding: 4px;
+    }
+
+    th {
+        text-align: center;
+
+        color: #aaa;
+        font-size: 0.8em;
+        font-weight: 400;
+
+        padding: 10px 0px;
+
+        &:first-child { text-align: left; padding-left: 20px; }
+    }
+
+    td:first-child {
+        text-align: left;
+        border-width: 1px 1px 1px 10px;
+        padding-left: 10px;
+
+        &.jxsi,
+        &.junts        {  border-left-color: #b2862b !important;}
+        &.psc          {  border-left-color: #ff0000 !important;}
+        &.pp           {  border-left-color: #1f96d2 !important;}
+        &.ciudadanos   {  border-left-color: #ff6d10 !important;}
+        &.catsi,
+        &.csp          {  border-left-color: #632e64 !important;}
+        &.udc          {  border-left-color: #012d74 !important;}
+        &.cup          {  border-left-color: #ab0000 !important;}
+        &.ganemos,
+        &.guanyem      {  border-left-color: #e4776b !important;}
+        &.pacma        {  border-left-color: #7f9107 !important;}
+        &.pirata-cat,
+        &.pirates      {  border-left-color: #b388ff !important;}
+        &.si           {  border-left-color: #52070c !important;}
+        &.farts        {  border-left-color: #079caa !important;}
+        &.vd           {  border-left-color: #00796b !important;}
+        &.uce          {  border-left-color: #546e7a !important;}
+        &.pre-ir       {  border-left-color: #d064c2 !important;}
+        &.sir          {  border-left-color: #424242 !important;}
+        &.rcv,
+        &.recorts      {  border-left-color: #199400 !important;}
+        &.eb,
+        &.escons       {  border-left-color: #ffbf00 !important;}
+
+
+        &.ciu          { border-left-color: #CC9A31 !important; }
+        &.esquerra-cat-si,
+        &.erc-cat-si,  { border-left-color: #D8A334 !important; }
+        &.psc          { border-left-color: #FF0000 !important; }
+        &.pp           { border-left-color: #1F96D2 !important; }
+        &.icv-euia     { border-left-color: #81BE00 !important; }
+        &.c-s          { border-left-color: #FF6D10 !important; }
+        &.cup          { border-left-color: #AB0000 !important; }
+        &.pxc          { border-left-color: @partido-desconocido !important; }
+        &.upyd         { border-left-color: @partido-desconocido !important; }
+        &.partido-desconocido { border-left-color: @partido-desconocido !important; }
+    }
+
+    td:last-child {
+        color: #aaa;
+    }
+
+    span.votos {
+        font-size: 0.8em
+    }
+
+    span.porcentaje {
+        font-weight: 700;
+    }
+}

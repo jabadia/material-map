@@ -10,8 +10,70 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">    
 
 </head>
-<body>
+<body ng-app="DemoApp" ng-controller="MainCtrl">
+
+    <md-toolbar>
+        Resultados Electorales
+    </md-toolbar>
+
+    <md-content>
+        <div layout="row" layout-align="space-between center" class="escrutinio">
+            <span>Última Actualización: {{ resultados.escrutinio.sHora }}</span>
+            <span>Escrutado: {{ resultados.escrutinio.dPcEscrutado }}%</span>
+        </div>
+        <div class="map-container" ng-class="{'expanded': mapExpanded}">
+            <div class="expander" ng-hide="mapExpanded" ng-click="mapExpanded = !mapExpanded;"></div>
+            <div id="mapa">
+            </div>
+        </div>
+
+    </md-content>
+
+    <md-content layout-padding ng-click="mapExpanded=false">
+
+        <md-tabs md-dynamic-height md-border-bottom>
+
+            <md-tab label="congreso">
+                <md-content>
+                    <table class="tabla-resultados">
+                        <tr>
+                            <th style="width: 45%;">Partido</th>
+                            <th style="width: 15%;">Escaños</th>
+                            <th style="width: 20%;">Votos</th>
+                            <th style="width: 20%;">2011</th>
+                        </tr>
+                        <tr ng-repeat="c in resultados.candidaturas">
+                            <td ng-class="'{{c.sCandidaturaUnificada}}'">{{ c.sCandidatura }}</td>
+                            <td>{{ c.iEscanos }}</td>
+                            <td><span class="porcentaje">{{c.dPcVotos|number:1}}%</span><br><span class="votos">{{ c.iVotos|number:0 }}</span></td>
+                            <td><span class="porcentaje">{{c.dPcVotos|number:1}}%</span><br><span class="votos">{{ c.iVotos|number:0 }}</span></td>
+                        </tr>
+                    </table>
+                </md-content>
+            </md-tab>
+
+            <md-tab label="senado">
+                <md-content>
+                    <table class="tabla-resultados">
+                        <tr>
+                            <th style="width: 45%;">Partido</th>
+                            <th style="width: 15%;">Escaños</th>
+                            <th style="width: 20%;">Votos</th>
+                            <th style="width: 20%;">2011</th>
+                        </tr>
+                        <tr ng-repeat="c in resultados.candidaturas">
+                            <td ng-class="'{{c.sCandidaturaUnificada}}'">{{ c.sCandidatura }}</td>
+                            <td>{{ c.iEscanos }}</td>
+                            <td><span class="porcentaje">{{c.dPcVotos|number:1}}%</span><br><span class="votos">{{ c.iVotos|number:0 }}</span></td>
+                            <td><span class="porcentaje">{{c.dPcVotos|number:1}}%</span><br><span class="votos">{{ c.iVotos|number:0 }}</span></td>
+                        </tr>
+                    </table>
+                </md-content>
+            </md-tab>
     
+        </md-tabs>    
+
+    </md-content>
 
     <script src="js/vendor.min.js"></script>
     <script src="js/app.js"></script>

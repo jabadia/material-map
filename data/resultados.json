@@ -1,0 +1,117 @@
+{
+ "ixComunidad": "09",
+ "sNombre": "Catalunya",
+ "candidaturas": [
+  {
+   "ixCandidatura": "0001",
+   "sCandidatura": "JxSí",
+   "iVotos": 1039685,
+   "dPcVotos": 28.67,
+   "iEscanos": 46,
+   "sCandidaturaUnificada": "junts"
+  },
+  {
+   "ixCandidatura": "0002",
+   "sCandidatura": "PSC-PSOE",
+   "iVotos": 526634,
+   "dPcVotos": 14.51,
+   "iEscanos": 22,
+   "sCandidaturaUnificada": "psc"
+  },
+  {
+   "ixCandidatura": "0003",
+   "sCandidatura": "PP",
+   "iVotos": 494715,
+   "dPcVotos": 13.64,
+   "iEscanos": 18,
+   "sCandidaturaUnificada": "pp"
+  },
+  {
+   "ixCandidatura": "0004",
+   "sCandidatura": "CatSiqueesPot",
+   "iVotos": 469316,
+   "dPcVotos": 12.93,
+   "iEscanos": 18,
+   "sCandidaturaUnificada": "catsi"
+  },
+  {
+   "ixCandidatura": "0005",
+   "sCandidatura": "C's",
+   "iVotos": 364797,
+   "dPcVotos": 10.05,
+   "iEscanos": 13,
+   "sCandidaturaUnificada": "ciudadanos"
+  },
+  {
+   "ixCandidatura": "0007",
+   "sCandidatura": "CUP",
+   "iVotos": 285679,
+   "dPcVotos": 7.87,
+   "iEscanos": 9,
+   "sCandidaturaUnificada": "cup"
+  },
+  {
+   "ixCandidatura": "0009",
+   "sCandidatura": "EB",
+   "iVotos": 129415,
+   "dPcVotos": 3.56,
+   "iEscanos": 3,
+   "sCandidaturaUnificada": "escons"
+  },
+  {
+   "ixCandidatura": "0008",
+   "sCandidatura": "PACMA",
+   "iVotos": 58629,
+   "dPcVotos": 1.6,
+   "iEscanos": 0,
+   "sCandidaturaUnificada": "pacma"
+  },
+  {
+   "ixCandidatura": "0011",
+   "sCandidatura": "PIRATA. CAT/XDT",
+   "iVotos": 43496,
+   "dPcVotos": 1.19,
+   "iEscanos": 0,
+   "sCandidaturaUnificada": "pirates"
+  },
+  {
+   "ixCandidatura": "0006",
+   "sCandidatura": "UDC",
+   "iVotos": 27852,
+   "dPcVotos": 0.75,
+   "iEscanos": 0,
+   "sCandidaturaUnificada": "udc"
+  },
+  {
+   "ixCandidatura": "0010",
+   "sCandidatura": "Recortes Cero-Els Verds",
+   "iVotos": 20553,
+   "dPcVotos": 0.56,
+   "iEscanos": 0,
+   "sCandidaturaUnificada": "recorts"
+  },
+  {
+   "ixCandidatura": "0012",
+   "sCandidatura": "Ganemos",
+   "iVotos": 17374,
+   "dPcVotos": 0.47,
+   "iEscanos": 0,
+   "sCandidaturaUnificada": "guanyem"
+  }
+ ],
+ "escrutinio": {
+  "sHora": "20:15",
+  "iCenso": 5257960,
+  "iCensoEscrutado": 5257960,
+  "dPcEscrutado": 100,
+  "iEscanos": 135,
+  "iVotos": 3657450,
+  "dPcVotos": 69.56,
+  "iAbstenciones": 1600510,
+  "dPcAbstenciones": 30.44,
+  "iBlancos": 52899,
+  "dPcBlancos": 1.45,
+  "iNulos": 32232,
+  "dPcNulos": 0.88
+ }
+}
