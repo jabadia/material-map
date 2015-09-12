@@ -134,11 +134,11 @@ angular.module("DemoApp")
                         //     layer.setStyle({ className: '' });
                         // });
 
-                        layer.on("click", function(e)
-                        {
-                            console.log("click");
-                            map.setView( layer.getBounds().getCenter(), map.getBoundsZoom(layer.getBounds())-0.5 );
-                        });
+                        // layer.on("click", function(e)
+                        // {
+                        //     console.log("click");
+                        //     map.setView( layer.getBounds().getCenter(), map.getBoundsZoom(layer.getBounds())-0.5 );
+                        // });
                     
                     },
                 });
