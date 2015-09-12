@@ -1,0 +1,22 @@
+{
+  "name": "hello-material",
+  "version": "0.0.0",
+  "authors": [
+    "Javier Abadia <javi.abadia@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "~0.11.0",
+    "d3": "~3.5.6",
+    "leaflet": "~0.7.5",
+    "topojson": "~1.6.19",
+    "underscore": "~1.8.3"
+  }
+}

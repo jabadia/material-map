@@ -1,0 +1,31 @@
+{
+  "name": "elec_cat2015",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-copy": "^0.8.1",
+    "grunt-contrib-less": "^1.0.0",
+    "grunt-contrib-uglify": "^0.8.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-ng-annotate": "^0.10.0",
+    "jit-grunt": "^0.9.1",
+    "load-grunt-tasks": "~0.2.0",
+    "time-grunt": "~0.2.3"
+  },
+  "dependencies": {
+    "ejs": "^2.3.1",
+    "express": "^4.12.3",
+    "express-ejs-layouts": "^1.1.0",
+    "lodash": "^3.10.0",
+    "underscore": "^1.8.3"
+  }
+}
